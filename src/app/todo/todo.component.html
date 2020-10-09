@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 larg">
+            <div class="todo">
+                <h2 class="heading">Tasks App!</h2>
+                <div class="form-group">
+                    <input type="text" (keyup.enter)="addTask(task)" class="myInput form-control" [(ngModel)]="task" placeholder="Add Task!">
+                    <button (click)="addTask(task)" class="myButton"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+                
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let task of tasks;index as i">{{task}}
+                    <button class="pull-right btn btn-danger" (click)="deleteTask(i)"><i class="fa fa-trash-o myI" aria-hidden="true"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
